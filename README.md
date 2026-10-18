@@ -22,6 +22,7 @@ Computer Science student & Fullstack Software Engineer — I translate business 
 - 🎓 Computer Science student passionate about end-to-end web applications
 - 🔐 Focus: **RBAC security (NextAuth, Spatie), AES-256-GCM field-level encryption, PostgreSQL & MySQL 8, performance, a11y, pixel-perfect Figma slicing**
 - 🏥 Recently built **KlinikForm SIMRS** — hospital-grade clinical intake & EMR with immutable audit trails
+- 💳 Also built **NilaiKita** — paid learning platform with a Go billing state machine, HMAC-signed idempotent webhooks, and a BFF-secured API
 - 🤖 Also built **WorkSpace Pro** — enterprise task platform with AI-driven workflow automation
 - 📝 Writing technical deep-dives on Medium (War Room AI, Aura)
 - ⚡ Currently exploring: query optimization, clean APIs, AI-augmented engineering
@@ -31,22 +32,32 @@ Computer Science student & Fullstack Software Engineer — I translate business 
 ### 🛠️ Tech Stack
 
 <div align="center">
-  <img src="https://skillicons.dev/icons?i=ts,js,react,nextjs,nodejs,php,laravel,postgres,mysql,solidity,tailwind,prisma,supabase,git,vercel,docker&perline=12" alt="Tech Stack" />
+  <img src="https://skillicons.dev/icons?i=ts,js,react,nextjs,nodejs,go,postgres,mysql,tailwind,prisma,supabase,docker,git,vercel&perline=12" alt="Tech Stack" />
 </div>
 
 | Category | Skills |
 |---|---|
-| **Fullstack & Core** | TypeScript, Modern JS (ES6+), React & Next.js (App Router), Node.js & Server Actions, PHP 8.3 & Laravel 12 (Eloquent, Blade), Tailwind & Component Architecture, REST API Design, Figma Slicing, OOP |
-| **Database & Backend** | Prisma ORM, MySQL 8, PostgreSQL (JSONB, Triggers & Constraints), Schema Design & ERD, Schema Versioning & Data Migration, Query Optimization & Indexing, Migrations & Seeding, Multi-Tenant Isolation |
-| **Security & Auth** | NextAuth.js, RBAC (Spatie Laravel-Permission), Secure Cookies & Tokens, AES-256-GCM Field-Level Encryption, Blind Indexing for Encrypted Search, Immutable Append-Only Audit Logging, FHIR R4 Health Data Interop, Zod Validation, XSS & CSRF Prevention, Env Management |
-| **Quality & Workflow** | Unit & Integration Testing, React Testing Library, Pest & PHPUnit, PHPStan Static Analysis (Level 8), Browser E2E Testing (Laravel Dusk), Docker & CI/CD (GitHub Actions), BRD → Tech Specs, Agile/Scrum, Git/GitHub, Vercel Pipelines |
-| **AI & Web3** | Gemini / OpenAI API, Prompt Engineering, wagmi + viem + RainbowKit, Solidity, Supabase, PWA Concepts |
+| **Fullstack & Core** | TypeScript (strict), Modern JS (ES6+), React 19 & Next.js 16 (App Router, Server Components), Node.js & Server Actions, Go 1.23, Tailwind CSS v4 & Design Tokens, REST API Design, BFF Architecture, GSAP / ScrollTrigger / SplitText, Figma Slicing, OOP |
+| **Database & Backend** | Prisma ORM, MySQL 8, PostgreSQL (JSONB, Triggers, CHECK Constraints & Partial Indexes), pgx v5 Raw SQL (no ORM), Schema Design & ERD, Schema Versioning & Data Migration, Query Optimization & Indexing, Migrations & Seeding, Multi-Tenant Isolation, Soft Delete & Ownership-Scoped Queries |
+| **Security & Auth** | NextAuth.js, RBAC, Secure Cookies & Tokens, Argon2id Password Hashing (PHC-encoded), Opaque Session Tokens Hashed at Rest, HMAC-SHA256 Webhook Signature Verification, Idempotency Keys, Row-Level Locking (`SELECT … FOR UPDATE`), Constant-Time Comparison, Sliding-Window Rate Limiting, AES-256-GCM Field-Level Encryption, Blind Indexing for Encrypted Search, Immutable Append-Only Audit Logging, FHIR R4 Health Data Interop, Zod Validation, XSS & CSRF Prevention, Env Management |
+| **Systems & Operations** | Go `net/http` Middleware Chains, chi v5 Routing, SQL Transaction Design, Structured Logging & Request-ID Tracing (`log/slog`), Panic Recovery & Graceful Shutdown, Health/Readiness Probes, pnpm Monorepo Architecture, Docker Multi-Stage Builds (non-root + HEALTHCHECK), Railway · Neon · Vercel Deployment |
+| **Quality & Workflow** | Unit & Integration Testing, Go Testing & Vitest, React Testing Library, Playwright End-to-End Testing, Browser E2E Testing, Automated WCAG 2.x Contrast Auditing, Docker & CI/CD (GitHub Actions), BRD → Tech Specs, Agile/Scrum, Git/GitHub, Vercel Pipelines |
+| **AI & Web3** | OpenCode, Gemini / OpenAI API, Prompt Engineering, wagmi + viem + RainbowKit, Supabase, PWA Concepts |
 
 ---
 
 ### 🚀 Featured Projects
 
-#### 1. KlinikForm SIMRS — Clinical Intake & Electronic Medical Record System
+#### 1. NilaiKita — Paid Investment-Learning Platform & Subscription Billing
+> Three-sided paid learning platform (member / coach / admin) engineered around the payment path, not the CRUD path. A real subscription state machine (trialing → active → expired → cancelled) settled by **HMAC-SHA256-signed, idempotent webhooks**: the signature is verified over raw bytes *before* parsing, and a `SELECT … FOR UPDATE` row lock plus a `provider_ref` idempotency key inside one transaction means a duplicate delivery can never double-activate a subscription. Prices are read server-side and client-submitted amounts are silently dropped. Progression is gated by a **quiz pass threshold (score ≥ 70)** instead of video watch-time, `correct_index` never leaves the API, and progress can never move backwards. Access sits behind a **BFF** — the browser never talks to the Go API, keeping the shared `X-API-Secret` and httpOnly session cookie server-side.
+
+`Go 1.23` `chi v5` `pgx v5 (Raw SQL)` `Next.js 16` `React 19` `TypeScript` `BFF` `PostgreSQL 16` `Argon2id` `HMAC-SHA256` `Idempotency Keys` `Tailwind v4` `GSAP` `Vitest` `Playwright` `Docker` `Railway · Neon · Vercel`
+
+[🔴 Live Demo](https://the-project-adits-projects-7049ea81.vercel.app) · `2026` · *Full Stack & Backend Engineer*
+
+---
+
+#### 2. KlinikForm SIMRS — Clinical Intake & Electronic Medical Record System
 > Hospital-grade SIMRS for a regulated healthcare domain: versioned JSON form engine so publishing a new schema never mutates an existing record, AES-256-GCM field-level encryption with deterministic blind-indexed NIK lookup, irreversible sign-off enforced by SHA-256 hashing plus database triggers, and an immutable append-only audit trail for Permenkes No. 24/2022 compliance. Integrates SatuSehat FHIR R4 and BPJS VClaim gateways.
 
 `PHP 8.3` `Laravel 12` `Blade` `Alpine.js` `PostgreSQL 14+ (JSONB)` `AES-256-GCM` `Spatie RBAC` `Tailwind CSS 4` `Pest 3` `PHPStan L8` `Laravel Dusk` `Docker`
@@ -55,7 +66,7 @@ Computer Science student & Fullstack Software Engineer — I translate business 
 
 ---
 
-#### 2. WorkSpace Pro — Task & Workflow Management System
+#### 3. WorkSpace Pro — Task & Workflow Management System
 > Enterprise Kanban that converts BRDs into AI-generated developer subtasks. NextAuth RBAC (`ADMIN` / `DEVELOPER`), Prisma + MySQL 8 relational design, responsive board.
 
 `Next.js` `TypeScript` `Prisma` `MySQL 8` `NextAuth RBAC` `Tailwind` `Gemini API`
@@ -64,7 +75,7 @@ Computer Science student & Fullstack Software Engineer — I translate business 
 
 ---
 
-#### 3. IntentShield — Policy-Enforced Security for Autonomous Crypto Agents
+#### 4. IntentShield — Policy-Enforced Security for Autonomous Crypto Agents
 > Turns natural-language intents into user-signed, on-chain enforced trading policies — a compromised AI agent literally cannot drain your wallet.
 
 `Solidity` `Next.js 16` `wagmi` `viem` `RainbowKit` `Uniswap V3` `Base Sepolia` `Gemini AI` `Supabase` `Tailwind v4` `Shadcn` `Three.js` `GSAP`
@@ -73,7 +84,7 @@ Computer Science student & Fullstack Software Engineer — I translate business 
 
 ---
 
-#### 4. War Room AI — Strategic Command Center
+#### 5. War Room AI — Strategic Command Center
 > Eliminates the MSME "Cash Flow Blind Spot" — enterprise-grade financial analytics, OCR/CSV parsing, and AI decision support for small businesses.
 
 `Next.js` `React` `TypeScript` `Tailwind` `Serverless Routes` `OCR/CSV Parser` `Gemini API`
