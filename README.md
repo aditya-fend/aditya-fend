@@ -1,17 +1,17 @@
 <div align="center">
 
-![Aditya Fend](https://readme-typing-svg.demolab.com?font=Inter&weight=700&size=32&pause=1000&center=true&vCenter=true&width=500&lines=Hi%2C+I'm+Aditya+Fend+%F0%9F%91%8B;Full+Stack+Web+Developer;BRD+%E2%86%92+Secure+%26+Scalable+Systems)
+![Aditya Fend](https://readme-typing-svg.demolab.com?font=Inter&weight=700&size=32&pause=1000&center=true&vCenter=true&width=500&lines=Hi%2C+I'm+Aditya+Fend+%F0%9F%91%8B;Full+Stack+Web+Developer;Backend+%26+System+Architecture)
 
-**Architecting robust full-stack systems with a focus on performance and business impact.**
+**I build web applications from start to finish — database, API, frontend, and deployment.**
 
-Computer Science student & Fullstack Software Engineer — I translate business requirements (BRDs) into scalable, secure, production-ready web apps.
+Computer Science student & Fullstack Software Engineer based in Grobogan, Central Java.
 
 [![Portfolio](https://img.shields.io/badge/Portfolio-aditya--fend.vercel.app-black?style=for-the-badge&logo=vercel)](https://aditya-fend.vercel.app)
 [![LinkedIn](https://img.shields.io/badge/LinkedIn-aditya--fend-0077B5?style=for-the-badge&logo=linkedin)](https://linkedin.com/in/aditya-fend)
 [![GitHub](https://img.shields.io/badge/GitHub-aditya--fend-181717?style=for-the-badge&logo=github)](https://github.com/aditya-fend)
 [![Email](https://img.shields.io/badge/Email-adityafend@gmail.com-D14836?style=for-the-badge&logo=gmail)](mailto:adityafend@gmail.com)
 
-🟢 **Open to Remote Opportunities** — Full-Time / Worldwide
+🟢 **Open to Opportunities** — Full-Time
 
 </div>
 
@@ -19,83 +19,73 @@ Computer Science student & Fullstack Software Engineer — I translate business 
 
 ### 🧑‍💻 About Me
 
-- 🎓 Computer Science student passionate about end-to-end web applications
-- 🔐 Focus: **RBAC security (NextAuth, Spatie), AES-256-GCM field-level encryption, PostgreSQL & MySQL 8, performance, a11y, pixel-perfect Figma slicing**
-- 🏥 Recently built **KlinikForm SIMRS** — hospital-grade clinical intake & EMR with immutable audit trails
-- 💳 Also built **NilaiKita** — paid learning platform with a Go billing state machine, HMAC-signed idempotent webhooks, and a BFF-secured API
-- 🤖 Also built **WorkSpace Pro** — enterprise task platform with AI-driven workflow automation
-- 📝 Writing technical deep-dives on Medium (War Room AI, Aura)
-- ⚡ Currently exploring: query optimization, clean APIs, AI-augmented engineering
+- 🎓 Computer Science student who enjoys building web apps end-to-end
+- 💻 Strongest on the backend side — building REST APIs with **Golang** and **Node.js**, and designing PostgreSQL / MySQL databases
+- 💳 My latest project is **NilaiKita**, a paid learning platform for investment education. I designed and built it from scratch: the backend API in Golang, the database structure, the subscription payment flow, and the frontend. The part I enjoyed most was making payments reliable — every payment confirmation is verified with a digital signature, and a payment that arrives twice can never activate a subscription twice.
+- 🔐 In another project I worked on encrypted patient records for a hospital system, where every change is recorded in an audit log that cannot be edited
+- 🤖 I use AI coding tools every day to help me write code, track down bugs, and find solutions
+- 📝 Writing technical articles on Medium
 
 ---
 
 ### 🛠️ Tech Stack
 
 <div align="center">
-  <img src="https://skillicons.dev/icons?i=ts,js,react,nextjs,nodejs,go,postgres,mysql,tailwind,prisma,supabase,docker,git,vercel&perline=12" alt="Tech Stack" />
+  <img src="https://skillicons.dev/icons?i=ts,js,react,nextjs,nodejs,go,postgres,mysql,solidity,tailwind,prisma,supabase,git,vercel,docker&perline=13" alt="Tech Stack" />
 </div>
 
 | Category | Skills |
 |---|---|
-| **Fullstack & Core** | TypeScript (strict), Modern JS (ES6+), React 19 & Next.js 16 (App Router, Server Components), Node.js & Server Actions, Go 1.23, Tailwind CSS v4 & Design Tokens, REST API Design, BFF Architecture, GSAP / ScrollTrigger / SplitText, Figma Slicing, OOP |
-| **Database & Backend** | Prisma ORM, MySQL 8, PostgreSQL (JSONB, Triggers, CHECK Constraints & Partial Indexes), pgx v5 Raw SQL (no ORM), Schema Design & ERD, Schema Versioning & Data Migration, Query Optimization & Indexing, Migrations & Seeding, Multi-Tenant Isolation, Soft Delete & Ownership-Scoped Queries |
-| **Security & Auth** | NextAuth.js, RBAC, Secure Cookies & Tokens, Argon2id Password Hashing (PHC-encoded), Opaque Session Tokens Hashed at Rest, HMAC-SHA256 Webhook Signature Verification, Idempotency Keys, Row-Level Locking (`SELECT … FOR UPDATE`), Constant-Time Comparison, Sliding-Window Rate Limiting, AES-256-GCM Field-Level Encryption, Blind Indexing for Encrypted Search, Immutable Append-Only Audit Logging, FHIR R4 Health Data Interop, Zod Validation, XSS & CSRF Prevention, Env Management |
-| **Systems & Operations** | Go `net/http` Middleware Chains, chi v5 Routing, SQL Transaction Design, Structured Logging & Request-ID Tracing (`log/slog`), Panic Recovery & Graceful Shutdown, Health/Readiness Probes, pnpm Monorepo Architecture, Docker Multi-Stage Builds (non-root + HEALTHCHECK), Railway · Neon · Vercel Deployment |
-| **Quality & Workflow** | Unit & Integration Testing, Go Testing & Vitest, React Testing Library, Playwright End-to-End Testing, Browser E2E Testing, Automated WCAG 2.x Contrast Auditing, Docker & CI/CD (GitHub Actions), BRD → Tech Specs, Agile/Scrum, Git/GitHub, Vercel Pipelines |
-| **AI & Web3** | OpenCode, Gemini / OpenAI API, Prompt Engineering, wagmi + viem + RainbowKit, Supabase, PWA Concepts |
+| **Fullstack & Core** | Golang, TypeScript, JavaScript, React & Next.js, Node.js, Tailwind CSS, REST API Design, Figma Slicing, OOP |
+| **Database & Backend** | PostgreSQL, MySQL, Prisma, Database Structure Design, Query Optimization & Indexing, Data Migration, Raw SQL (tanpa ORM) |
+| **Security & Auth** | Password Hashing, Webhook Signature Verification, Data Encryption, Role-Based Access Control, Input Validation, Audit Logging |
+| **Payments & Reliability** | Idempotency Keys, Row Locking, Signed Webhooks, Subscription State Machines, Rate Limiting |
+| **Quality & Workflow** | Unit & Integration Testing, End-to-End Browser Testing, Docker & CI/CD, Agile/Scrum, Git/GitHub, Vercel & Google Cloud Run |
+| **AI & Web3** | Gemini / OpenAI API, Prompt Engineering, AI Coding Agents, Solidity, wagmi + viem, Supabase |
 
 ---
 
 ### 🚀 Featured Projects
 
-#### 1. NilaiKita — Paid Investment-Learning Platform & Subscription Billing
-> Three-sided paid learning platform (member / coach / admin) engineered around the payment path, not the CRUD path. A real subscription state machine (trialing → active → expired → cancelled) settled by **HMAC-SHA256-signed, idempotent webhooks**: the signature is verified over raw bytes *before* parsing, and a `SELECT … FOR UPDATE` row lock plus a `provider_ref` idempotency key inside one transaction means a duplicate delivery can never double-activate a subscription. Prices are read server-side and client-submitted amounts are silently dropped. Progression is gated by a **quiz pass threshold (score ≥ 70)** instead of video watch-time, `correct_index` never leaves the API, and progress can never move backwards. Access sits behind a **BFF** — the browser never talks to the Go API, keeping the shared `X-API-Secret` and httpOnly session cookie server-side.
+#### 1. NilaiKita — Platform Belajar Investasi Berlangganan
+> A paid platform for learning about investing, with three kinds of users: members, coaches, and admins. The interesting part was the payment flow — a subscription moves through statuses (trial, active, expired, cancelled) that are only confirmed through signed webhooks. Because a webhook can arrive more than once, I added an idempotency key and row locking inside a single transaction, so a duplicate delivery can never activate a subscription twice. Prices are decided on the server, never by the browser. The frontend talks to a small server layer, so the Go API and its secrets are never exposed to the browser.
 
-`Go 1.23` `chi v5` `pgx v5 (Raw SQL)` `Next.js 16` `React 19` `TypeScript` `BFF` `PostgreSQL 16` `Argon2id` `HMAC-SHA256` `Idempotency Keys` `Tailwind v4` `GSAP` `Vitest` `Playwright` `Docker` `Railway · Neon · Vercel`
+`Go` `chi` `pgx` `PostgreSQL` `Next.js` `TypeScript` `Tailwind CSS` `Vitest` `Playwright` `Docker` `Railway` `Neon` `Vercel`
 
-[🔴 Live Demo](https://the-project-adits-projects-7049ea81.vercel.app) · `2026` · *Full Stack & Backend Engineer*
+[🔴 Live Demo](https://nilai-kita-aditya-fend.vercel.app) · `2026` · *Fullstack & Backend Engineer*
 
 ---
 
-#### 2. KlinikForm SIMRS — Clinical Intake & Electronic Medical Record System
-> Hospital-grade SIMRS for a regulated healthcare domain: versioned JSON form engine so publishing a new schema never mutates an existing record, AES-256-GCM field-level encryption with deterministic blind-indexed NIK lookup, irreversible sign-off enforced by SHA-256 hashing plus database triggers, and an immutable append-only audit trail for Permenkes No. 24/2022 compliance. Integrates SatuSehat FHIR R4 and BPJS VClaim gateways.
+#### 2. KlinikForm SIMRS — Rekam Medis Elektronik
+> A hospital information system for a regulated healthcare domain. Form templates are versioned, so publishing a new form never changes records that were already collected. Patient details are encrypted, and every change is written to an audit log that cannot be edited, to meet Indonesia's health data regulation (Permenkes No. 24/2022). Connects to the national health system (SatuSehat FHIR R4) and BPJS VClaim.
 
-`PHP 8.3` `Laravel 12` `Blade` `Alpine.js` `PostgreSQL 14+ (JSONB)` `AES-256-GCM` `Spatie RBAC` `Tailwind CSS 4` `Pest 3` `PHPStan L8` `Laravel Dusk` `Docker`
+`PHP` `Laravel` `PostgreSQL` `Encryption` `Tailwind CSS` `Docker`
 
 [💻 GitHub](https://github.com/aditya-fend/sim-rs) · `2026` · *Full Stack & Systems Engineer*
 
 ---
 
 #### 3. WorkSpace Pro — Task & Workflow Management System
-> Enterprise Kanban that converts BRDs into AI-generated developer subtasks. NextAuth RBAC (`ADMIN` / `DEVELOPER`), Prisma + MySQL 8 relational design, responsive board.
+> A Kanban board that turns written requirements into developer subtasks with AI. Includes role-based access control for admins and developers, a relational database design, and a responsive interface.
 
-`Next.js` `TypeScript` `Prisma` `MySQL 8` `NextAuth RBAC` `Tailwind` `Gemini API`
+`Next.js` `TypeScript` `Prisma` `MySQL` `Tailwind CSS` `Gemini API`
 
-[🔴 Live Demo](https://workspace-pro-aditya-fend.vercel.app) · [💻 GitHub](https://github.com/aditya-fend) · `2026` · *Fullstack Software Engineer*
-
----
-
-#### 4. IntentShield — Policy-Enforced Security for Autonomous Crypto Agents
-> Turns natural-language intents into user-signed, on-chain enforced trading policies — a compromised AI agent literally cannot drain your wallet.
-
-`Solidity` `Next.js 16` `wagmi` `viem` `RainbowKit` `Uniswap V3` `Base Sepolia` `Gemini AI` `Supabase` `Tailwind v4` `Shadcn` `Three.js` `GSAP`
-
-[🔴 Live Demo](https://intent-shield-aditya-fend.vercel.app) · [💻 GitHub](https://github.com/aditya-fend) · `2026` · *Web3 Fullstack Engineer*
+[🔴 Live Demo](https://workspace-pro-aditya-fend.vercel.app) · `2026` · *Fullstack Software Engineer*
 
 ---
 
-#### 5. War Room AI — Strategic Command Center
-> Eliminates the MSME "Cash Flow Blind Spot" — enterprise-grade financial analytics, OCR/CSV parsing, and AI decision support for small businesses.
+#### 4. War Room AI — Analitik Keuangan UMKM
+> Helps small businesses see their cash situation clearly through financial analytics, document reading (OCR/CSV), and AI-based recommendations for business decisions.
 
-`Next.js` `React` `TypeScript` `Tailwind` `Serverless Routes` `OCR/CSV Parser` `Gemini API`
+`Next.js` `React` `TypeScript` `Tailwind CSS` `OCR / CSV` `Gemini API`
 
-[🔴 Live Demo](https://ai-war-room-aditya-fend.vercel.app) · [💻 GitHub](https://github.com/aditya-fend) · `2026` · *AI Full-Stack Developer*
+[🔴 Live Demo](https://ai-war-room-aditya-fend.vercel.app) · `2026` · *AI Full-Stack Developer*
 
 ---
 
 ### ✍️ Technical Writings
 
-- 📄 [How We Built War Room AI: Eliminating the MSME Cash Flow Blind Spot](https://medium.com/@adityaportfolio3/how-we-built-war-room-ai-eliminating-the-msme-cash-flow-blind-spot-using-gemini-multi-agent-ca932870361e) — `AI` `Finance` `Entrepreneurship` · 4 min
+- 📄 [How We Built War Room AI: Helping MSMEs See Their Cash Situation](https://medium.com/@adityaportfolio3/how-we-built-war-room-ai-eliminating-the-msme-cash-flow-blind-spot-using-gemini-multi-agent-ca932870361e) — `AI` `Finance` · 4 min
 
 ---
 
@@ -112,7 +102,7 @@ Computer Science student & Fullstack Software Engineer — I translate business 
 
 <div align="center">
 
-**Let's build scalable, impactful applications together.**
+**Let's build something useful together.**
 
 [![Email](https://img.shields.io/badge/adityafend@gmail.com-D14836?style=flat-square&logo=gmail)](mailto:adityafend@gmail.com)
 [![LinkedIn](https://img.shields.io/badge/LinkedIn-0077B5?style=flat-square&logo=linkedin)](https://linkedin.com/in/aditya-fend)
