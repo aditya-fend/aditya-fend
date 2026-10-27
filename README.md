@@ -20,8 +20,9 @@ Computer Science student & Fullstack Software Engineer based in Grobogan, Centra
 ### 🧑‍💻 About Me
 
 - 🎓 Computer Science student who enjoys building web apps end-to-end
-- 💻 Strongest on the backend side — building REST APIs with **Golang** and **Node.js**, and designing PostgreSQL / MySQL databases
-- 💳 My latest project is **NilaiKita**, a paid learning platform for investment education. I designed and built it from scratch: the backend API in Golang, the database structure, the subscription payment flow, and the frontend. The part I enjoyed most was making payments reliable — every payment confirmation is verified with a digital signature, and a payment that arrives twice can never activate a subscription twice.
+- 💻 Strongest on the backend side — building REST APIs with **Golang**, **Python (FastAPI)**, and **Node.js**, and designing PostgreSQL / MySQL databases
+- 🧠 My latest project is **Nalar**, an AI analytics workspace for F&B distributor operations teams. Gemini only plans the query; PostgreSQL does the math, so the model never writes SQL. Built with Python, FastAPI, PostgreSQL, and Next.js.
+- 💳 **NilaiKita** is a paid learning platform for investment education. I designed and built it from scratch: the backend API in Golang, the database structure, the subscription payment flow, and the frontend. The part I enjoyed most was making payments reliable — every payment confirmation is verified with a digital signature, and a payment that arrives twice can never activate a subscription twice.
 - 🔐 In another project I worked on encrypted patient records for a hospital system, where every change is recorded in an audit log that cannot be edited
 - 🤖 I use AI coding tools every day to help me write code, track down bugs, and find solutions
 - 📝 Writing technical articles on Medium
@@ -31,13 +32,13 @@ Computer Science student & Fullstack Software Engineer based in Grobogan, Centra
 ### 🛠️ Tech Stack
 
 <div align="center">
-  <img src="https://skillicons.dev/icons?i=ts,js,react,nextjs,nodejs,go,postgres,mysql,solidity,tailwind,prisma,supabase,git,vercel,docker&perline=13" alt="Tech Stack" />
+  <img src="https://skillicons.dev/icons?i=ts,js,react,nextjs,nodejs,go,python,fastapi,postgres,mysql,solidity,tailwind,prisma,supabase,git,vercel,docker&perline=13" alt="Tech Stack" />
 </div>
 
 | Category | Skills |
 |---|---|
-| **Fullstack & Core** | Golang, TypeScript, JavaScript, React & Next.js, Node.js, Tailwind CSS, REST API Design, Figma Slicing, OOP |
-| **Database & Backend** | PostgreSQL, MySQL, Prisma, Database Structure Design, Query Optimization & Indexing, Data Migration, Raw SQL (tanpa ORM) |
+| **Fullstack & Core** | Golang, Python, TypeScript, JavaScript, React & Next.js, Node.js, FastAPI, Tailwind CSS, REST API Design, Figma Slicing, OOP |
+| **Database & Backend** | PostgreSQL, MySQL, Prisma, SQLAlchemy, Database Structure Design, Query Optimization & Indexing, Data Migration, Raw SQL (tanpa ORM) |
 | **Security & Auth** | Password Hashing, Webhook Signature Verification, Data Encryption, Role-Based Access Control, Input Validation, Audit Logging |
 | **Payments & Reliability** | Idempotency Keys, Row Locking, Signed Webhooks, Subscription State Machines, Rate Limiting |
 | **Quality & Workflow** | Unit & Integration Testing, End-to-End Browser Testing, Docker & CI/CD, Agile/Scrum, Git/GitHub, Vercel & Google Cloud Run |
@@ -47,7 +48,16 @@ Computer Science student & Fullstack Software Engineer based in Grobogan, Centra
 
 ### 🚀 Featured Projects
 
-#### 1. NilaiKita — Platform Belajar Investasi Berlangganan
+#### 1. Nalar — AI Analytics Workspace for F&B Distributors
+> An analytics workspace for operations teams at F&B distributors. You ask a business question in plain language; Gemini only turns it into a structured query plan, PostgreSQL calculates the numbers, and the screen shows the answer, a chart, and a calculation trail you can inspect. The model never writes SQL — the plan is validated and compiled into parameterized queries. Login uses Argon2id with server-side sessions, permissions are checked on every request, and every question is recorded in an audit history.
+
+`Python` `FastAPI` `PostgreSQL` `SQLAlchemy` `Alembic` `Next.js` `TypeScript` `Tailwind CSS` `Google Gemini API` `Argon2id` `Docker` `Railway` `Neon` `Vercel`
+
+[🔴 Live Demo](https://nalar-aditya-fend.vercel.app) · `2026` · *AI Full-Stack Engineer*
+
+---
+
+#### 2. NilaiKita — Platform Belajar Investasi Berlangganan
 > A paid platform for learning about investing, with three kinds of users: members, coaches, and admins. The interesting part was the payment flow — a subscription moves through statuses (trial, active, expired, cancelled) that are only confirmed through signed webhooks. Because a webhook can arrive more than once, I added an idempotency key and row locking inside a single transaction, so a duplicate delivery can never activate a subscription twice. Prices are decided on the server, never by the browser. The frontend talks to a small server layer, so the Go API and its secrets are never exposed to the browser.
 
 `Go` `chi` `pgx` `PostgreSQL` `Next.js` `TypeScript` `Tailwind CSS` `Vitest` `Playwright` `Docker` `Railway` `Neon` `Vercel`
@@ -56,7 +66,7 @@ Computer Science student & Fullstack Software Engineer based in Grobogan, Centra
 
 ---
 
-#### 2. KlinikForm SIMRS — Rekam Medis Elektronik
+#### 3. KlinikForm SIMRS — Rekam Medis Elektronik
 > A hospital information system for a regulated healthcare domain. Form templates are versioned, so publishing a new form never changes records that were already collected. Patient details are encrypted, and every change is written to an audit log that cannot be edited, to meet Indonesia's health data regulation (Permenkes No. 24/2022). Connects to the national health system (SatuSehat FHIR R4) and BPJS VClaim.
 
 `PHP` `Laravel` `PostgreSQL` `Encryption` `Tailwind CSS` `Docker`
@@ -65,7 +75,7 @@ Computer Science student & Fullstack Software Engineer based in Grobogan, Centra
 
 ---
 
-#### 3. WorkSpace Pro — Task & Workflow Management System
+#### 4. WorkSpace Pro — Task & Workflow Management System
 > A Kanban board that turns written requirements into developer subtasks with AI. Includes role-based access control for admins and developers, a relational database design, and a responsive interface.
 
 `Next.js` `TypeScript` `Prisma` `MySQL` `Tailwind CSS` `Gemini API`
@@ -74,7 +84,7 @@ Computer Science student & Fullstack Software Engineer based in Grobogan, Centra
 
 ---
 
-#### 4. War Room AI — Analitik Keuangan UMKM
+#### 5. War Room AI — Analitik Keuangan UMKM
 > Helps small businesses see their cash situation clearly through financial analytics, document reading (OCR/CSV), and AI-based recommendations for business decisions.
 
 `Next.js` `React` `TypeScript` `Tailwind CSS` `OCR / CSV` `Gemini API`
